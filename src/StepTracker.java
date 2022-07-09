@@ -53,14 +53,8 @@ public class StepTracker {
         int seriesDay = 0;
         for (int i = 0; i < monthData[month].daySteps.length; i++){
             if(monthData[month].daySteps[i] >= goalStep){
-                if (i > 0){
-                    seriesDay++;
-                    if (seriesDay > contDayBestSeries){
-                        contDayBestSeries = seriesDay;
-                    }
-                }
-                else{
-                    seriesDay++;
+                seriesDay++;
+                if (seriesDay > contDayBestSeries){
                     contDayBestSeries = seriesDay;
                 }
             }
